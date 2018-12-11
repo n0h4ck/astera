@@ -1,6 +1,7 @@
 /* RESET */
-* { margin: 0px; padding: 0px; }
+* { margin: 0px; padding: 0px; color: #343a40; }
 ul { list-style: none; }
+a { text-decoration: none; }
 
 html, body {
     height: 100%;
@@ -11,34 +12,132 @@ html, body {
     width: 100%; height: 100%;
 }
 
-#header_wrap {
+
+/* Header */
+/* Left : Logo & Search */
+.header-container {
     left: 0; top: 0;
-    width: 100%;
-    height: 60px;
-    border-bottom: 1px solid black;
-
-    position: fixed;
-    z-index: 3;
+    width: 100%; height: 60px;
+    position: fixed; z-index: 3;
+    background-color: white;
+    box-shadow: 0px 2px 3px 0px rgb(200, 200, 200);
 }
 
-#content_wrap {
-    padding-top: 60px;
-    height: 100%;
+.header-container .header-wrap {
+    padding: 0 30px; height: 100%;
+    display: flex; justify-content: space-between;
+    align-items: center;
 }
 
-#side_wrap {
+.header-container .header-wrap .header-logo {
+    display: flex; align-items: center;
+}
+
+.header-container .header-wrap .header-logo img {
+    height: 50px; margin-right: 20px;
+}
+
+.header-container .header-wrap .header-logo .header-search-box {
+    width: 240px; height: 30px;
+    
+    border: 2px solid #cccccc;
+    border-radius: 15px 15px 15px 15px;
+    padding: 0 15px;
+    display: flex; justify-content: space-between;
+    align-items: center;
+}
+
+.header-container .header-wrap .header-logo .header-search-box input {
+    width: 220px; background: transparent;
+    border: none;
+}
+
+.header-container .header-wrap .header-logo .header-search-box input:focus {
+    outline: none;
+}
+
+.header-container .header-wrap .header-logo .header-search-box input::-webkit-search-cancel-button {
+    display: none;
+}
+
+.header-container .header-wrap .header-logo .header-search-box a {
+    width: 15px; height: 100%;
+    display: flex; align-items: center;
+}
+
+.header-container .header-wrap .header-logo .header-search-box a img {
+    width: 15px; height: 15px;
+}
+
+/* Right : User_Info */
+.header-container .header-wrap .header-user a .login_box {
+    width: 100px; height: 40px;
+    border: 1px solid #929292;  background-color: white;
+    line-height: 40px; text-align: center;
+    transition-duration: 0.5s;
+}
+
+.header-container .header-wrap .header-user a:hover .login_box {
+    background-color: #f1f1f1;
+    transition-duration: 0.5s;
+}
+
+
+/* Aside */
+.side-container {
     width: 240px; height: 100%;
-    border-right: 1px solid black;
-
+    background-color: #f1f1f1;
     position: fixed;
+    padding-top: 60px;
     z-index: 2;
 }
 
+.side-container .nav-wrap { padding-top: 20px; }
+.side-container .nav-wrap .side-menu li {
+    width: 100%; height: 40px;
+    display: flex; align-items: center;
+}
 
+.side-container .nav-wrap .side-menu li a {
+    width: 100%; height: 100%; padding-left: 20px;
+    display: flex; align-items: center;
+}
 
+.side-container .nav-wrap .side-menu li a:hover {
+    background-color: #cccccc;
+}
 
+.side-container .nav-wrap .side-menu .selected {
+    background-color: #cccccc;
+    font-weight: bold;
+}
 
+.side-container .nav-wrap .side-menu li img {
+    width: 20px; height: 20px;
+    margin-right: 20px;
+}
 
+.side-container .nav-wrap .side-menu li a span { font-size: 14px; }
+.side-container .nav-wrap .side-menu .divider {
+    width: 180px; border: 0.5px solid #929292;
+    margin: 0 auto;
+    margin-top: 10px; margin-bottom: 10px;
+
+}
+
+.side-container .side-character {
+    display: flex;
+    justify-content: center;
+}
+.side-container .side-character img {
+    align-self: flex-end;
+    width: 90%;
+}
+
+#main_wrap {
+    padding-top: 60px;
+    height: 100%;
+}
 
 .article-container {
     margin-left: 240px;
@@ -90,7 +189,8 @@ html, body {
 }
 
 .footer-container .footer-wrap .footer-content-l .copyright img {
-    margin-right: 10px;
+    height: 30px;
+    margin-right: 10px; 
 }
 
 .footer-container .footer-wrap .footer-content-r .footer-sns {
@@ -100,6 +200,10 @@ html, body {
 
 .footer-container .footer-wrap .footer-content-r .footer-sns li {
     margin-right: 5px;
+}
+
+.footer-container .footer-wrap .footer-content-r .footer-sns li img {
+    width: 30px; height: 30px;
 }
 
 .footer-container .divider { padding: 0 5px; color: #d1d1d1; }
