@@ -134,16 +134,41 @@ html, body {
     width: 90%;
 }
 
-#main_wrap {
+/* Article */
+.main-wrap {
     padding-top: 60px;
-    height: 100%;
+    width: 100%; height: 100%;
 }
+
+.main-wrap .app {
+    height: 50px; 
+    display: flex; justify-content: center;
+    align-items: center;
+    padding-left: 240px;
+    background-color: hsl(180, 97%, 39%);
+}
+
+.main-wrap .app p {
+    color: white; font-size: 14px;
+    margin-right: 15px;
+}
+.main-wrap .app a { line-height: 10px; }
+.main-wrap .app a img { width: 35px; height: 35px; }
+
 
 .article-container {
-    margin-left: 240px;
+    position: relative;
+    padding: 15px 15px; margin-left: 240px;
 }
 
+.article-container .notice-wrap { width: 100%; margin-bottom: 10px; }
+.article-container .notice-wrap img { width: 100%; height: 100%; }
 
+.article-container .sub-notice-wrap {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+}
 
 
 /* Footer */
